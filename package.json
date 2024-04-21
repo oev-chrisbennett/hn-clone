@@ -26,6 +26,7 @@
     },
     "devDependencies": {
         "@biomejs/biome": "1.7.0",
+        "@types/luxon": "^3.4.2",
         "lefthook": "^1.6.10"
     },
     "trustedDependencies": ["@biomejs/biome"]
