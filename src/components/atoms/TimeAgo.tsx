@@ -1,12 +1,12 @@
 import { DateTime } from 'luxon'
 
 interface TimeAgoProps {
-    timestamp: string
+    timestamp: number
 }
 
 const TimeAgo: React.FC<TimeAgoProps> = ({ timestamp }) => {
-    const date = DateTime.fromISO(timestamp)
-    const timeAgo = date.toRelative()
+    const dateTime = DateTime.fromSeconds(timestamp)
+    const timeAgo = dateTime.toRelative()
 
     return <span className="text-gray-500 text-sm">{timeAgo}</span>
 }

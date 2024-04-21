@@ -1,11 +1,15 @@
 import StoryItem from '@/components/molecules/StoryItem'
 
 interface Story {
+    by: string
+    descendants: number
     id: number
+    kids: number[]
+    score: number
+    time: number
     title: string
-    author: string
-    points: number
-    timestamp: string
+    type: string
+    url: string
 }
 
 interface StoryListProps {
