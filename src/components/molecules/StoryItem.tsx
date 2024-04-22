@@ -1,20 +1,15 @@
 import Link from '@/components/atoms/Link'
 import Text from '@/components/atoms/Text'
 import TimeAgo from '@/components/atoms/TimeAgo'
+import type { Story } from '@/types/Story'
 
 interface StoryItemProps {
-    by: string
-    descendants: number
-    id: number
-    kids: number[]
-    score: number
-    time: number
-    title: string
-    type: string
-    url: string
+    story: Story
 }
 
-const StoryItem: React.FC<StoryItemProps> = ({ by, descendants, id, kids, score, time, title, type, url }) => {
+const StoryItem: React.FC<StoryItemProps> = ({ story }) => {
+    const { by, descendants, id, score, time, title, url } = story
+
     const pageUrl = url || `/story/${id}`
     const domainRegex = /^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n]+)/im
     const domainMatch = pageUrl?.match(domainRegex)
