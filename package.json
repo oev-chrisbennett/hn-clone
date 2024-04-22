@@ -27,6 +27,7 @@
     "devDependencies": {
         "@biomejs/biome": "1.7.0",
         "@types/luxon": "^3.4.2",
+        "@vercel/speed-insights": "^1.0.10",
         "lefthook": "^1.6.10"
     },
     "trustedDependencies": ["@biomejs/biome"]
