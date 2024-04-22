@@ -5,7 +5,7 @@ import TimeAgo from '@/components/atoms/TimeAgo'
 interface CommentProps {
     author: string
     content: string
-    timestamp: string
+    timestamp: number
 }
 
 const Comment: React.FC<CommentProps> = ({ author, content, timestamp }) => {

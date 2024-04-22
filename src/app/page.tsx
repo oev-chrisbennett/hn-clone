@@ -1,12 +1,5 @@
 import HomePage from '@/components/templates/HomePage'
-
-interface Story {
-    id: number
-    title: string
-    author: string
-    points: number
-    timestamp: string
-}
+import type { Story } from '@/types/Story'
 
 async function getLatestStories(): Promise<Story[]> {
     // Fetch the latest stories from the Hacker News API

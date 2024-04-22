@@ -4,7 +4,7 @@ interface CommentData {
     id: number
     author: string
     content: string
-    timestamp: string
+    timestamp: number
 }
 
 interface CommentThreadProps {
