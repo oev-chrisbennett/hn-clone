@@ -7,7 +7,7 @@ async function getLatestStories(): Promise<Story[]> {
     const storyIds = await res.json()
 
     // Fetch the details of the top 100 stories
-    const storyPromises = storyIds.slice(0, 100).map(async (id: number) => {
+    const storyPromises = storyIds.slice(0, 10).map(async (id: number) => {
         const storyRes = await fetch(`https://hacker-news.firebaseio.com/v0/item/${id}.json`)
 
         return await storyRes.json()
